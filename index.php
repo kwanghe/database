@@ -132,9 +132,9 @@
             <hr style="border:1px solid lightgrey;">
             <form name="addform" method="post" action="dataWrite.php">
                 <p class="addText">주제</p>
-                <input type="text" name="title" placeholder="Java 공부하기 (24자까지)" maxlength='24' required /><br>
+                <input type="text" name="title" placeholder="제목" maxlength='24' required /><br>
                 <p class="addText">어떤 일인가요?</p>
-                <input type="text" name="data" placeholder="지니 (10자까지)" maxlength='10' required /><br>
+                <input type="text" name="data" placeholder="상세설명" maxlength='10' required /><br>
                 <p class="addText">할일, 하고있는일, 한일 중에 선택하세요.</p>
                 <div class="rank">
                     <label><input type="radio" name="rank" value="1" checked="checked">할일</label>
