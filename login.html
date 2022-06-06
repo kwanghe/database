@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>할 일</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body onload = "document.loginform.userid.focus();">
+    <div class="login_wrap">
+        <div class="sec_wrapper">
+            <div class="login_sec">
+                <div class="login_logo">오늘 할 일,</div><hr style="width: 170px; border: 1px solid #bbb;">
+                <div class="login_info">로그인 후 시작하세요.<br><p style="color:red"></p></div>
+                
+                <form name="loginform" method="post" action="loginCheck.php" enctype="multipart/form-data">
+                    <input type="text" name="id" placeholder="아이디" maxlength='20' style="width: 310px" required /><br>
+                    <input type="password" name="pw" placeholder="비밀번호" maxlength='20' style="width: 310px" required /><br>
+                    <div class="addtodo_buttonlist">
+                        <input type="button" value="회원가입" name="" onclick= "location.href = 'register.html';" style="background: #efb64b; cursor: pointer;" onmouseover="this.style.textDecoration= 'underline';" onmouseout="this.style.textDecoration='none';">
+                        <input type="submit" value="로그인" style="background: rgb(50, 162, 210); cursor: pointer; margin-right: 15px;" onmouseover="this.style.textDecoration= 'underline';" onmouseout="this.style.textDecoration='none';">
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

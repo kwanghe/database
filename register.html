@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script language="javascript">
+
+        function Input()
+        {
+
+            if(document.frmInput.username.value == "") {
+                alert("이름을 입력해주세요");
+                document.frmInput.username.focus();
+                return false;
+            }
+            if(document.frmInput.userpw.value !== document.frmInput.userpw_check.value) {
+                alert("비밀번호가 일치하지 않습니다.");
+                document.frmInput.userpw.focus();
+                return false;
+            }
+            if(document.frmInput.userpw.value == "") {
+                alert("비밀번호를 입력하세요.");
+                document.frmInput.userpw.focus();
+                return false;
+            }
+
+            document.frmInput.submit();
+        }
+
+
+    </script>
+    
+</head>
+
+<body>
+    <div class="login_wrap">
+        <div class="sec_wrapper">
+            <div class="login_sec">
+                <div class="login_logo">회원가입</div>
+                <hr style="width: 170px; border: 1px solid #bbb;">
+                <div class="login_info">안녕하세요<br><p style="color:red"></p></div>
+
+                <form name="frmInput" method="post" action="memberWrite.php" enctype="multipart/form-data">
+                    
+                    <input type="text" name="username" id="username" placeholder="이름" maxlength='20' style="width: 310px" required /><br>
+                    
+                    <input type="text" name="userid" id="userid" placeholder="아이디" maxlength='20' style="width: 310px" required /><br>
+                    
+                    
+                    <input type="password" name="userpw" id="userpw" placeholder="비밀번호" maxlength='20' style="width: 310px" required /><br>
+                    
+                    <input type="password" name="userpw_check" id="userpw_check" placeholder="비밀번호 확인" maxlength='20' style="width: 310px" required /><br>
+                    
+                    
+                    
+                    <div class="addtodo_buttonlist">
+                        <input type="button" value="로그인" name="" style="background: #ea8d8a; cursor: pointer;" onclick="location.href = 'login.html';" onmouseover="this.style.textDecoration= 'underline';" onmouseout="this.style.textDecoration='none';">
+                        <input type="button" value="회원가입" onclick="Input()" style="background: rgb(50, 162, 210); cursor: pointer; margin-right: 70px;" onmouseover="this.style.textDecoration= 'underline';" onmouseout="this.style.textDecoration='none';">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
